@@ -5,8 +5,10 @@ const h3Style = {
   fontSize: 15,
 };
 const Profile = (props) => {
-  let user = props.function();
-  console.log(user);
+  
+  let userId = window.location.pathname.split("/")[2];
+  let user = props.function(userId);
+  // console.log(userId);
   return (
     <div className="row">
       <div className="col-sm-4">

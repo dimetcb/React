@@ -12,20 +12,23 @@ const user = {
 };
 
 const users = {
-  0: { name: "Ипатий", lastname: "Ельцин" },
-  1: { name: "Валерия", lastname: "Ялбачевa" },
-  2: { name: "Ксения", lastname: "Тетеринa" },
-  3: { name: "Нина", lastname: "Ельцинa" },
-  4: { name: "Владислава", lastname: "Енютинa" },
-  5: { name: "Юлия", lastname: "Юлбачевa" },
-  6: { name: "Петр", lastname: "Праздников" },
-  7: { name: "Владислав", lastname: "Вольпов" },
-  8: { name: "Константин", lastname: "Вольпов" },
-  9: { name: "Нина", lastname: "Тетеринa" },
-  10: { name: "Владислав", lastname: "Яблочков" },
+  0: { name: "Ипатий", lastname: "Ельцин", id: 4 },
+  1: { name: "Валерия", lastname: "Ялбачевa", id: 6 },
+  2: { name: "Ксения", lastname: "Тетеринa", id: 32 },
+  3: { name: "Нина", lastname: "Ельцинa", id: 45 },
+  4: { name: "Владислава", lastname: "Енютинa", id: 11 },
+  5: { name: "Юлия", lastname: "Юлбачевa", id: 25 },
+  6: { name: "Петр", lastname: "Праздников", id: 36 },
+  7: { name: "Владислав", lastname: "Вольпов", id: 86 },
+  8: { name: "Константин", lastname: "Вольпов", id: 3 },
+  9: { name: "Нина", lastname: "Тетеринa", id: 72 },
+  10: { name: "Владислав", lastname: "Яблочков", id: 66 },
 };
 
-export function getUser() {
+export function getUser(userId) {
+  for (let i = 0; i < Object.keys(users).length; i++) {
+    if(users[i].id == userId) return users[i];
+  }
   return user;
 }
 export function getUsers() {
